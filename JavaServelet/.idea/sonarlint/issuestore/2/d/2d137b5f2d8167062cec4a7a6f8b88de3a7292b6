@@ -1,0 +1,7 @@
+
+«
+java:S1130"ˆRemove the declaration of thrown exception 'org.omg.CosNaming.NamingContextPackage.NotFound', as it cannot be thrown from method's body.(ÁçÒˆüÿÿÿÿ8ÚÍ¥½±1
+…
+java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ôå¶úÿÿÿÿ8ßÍ¥½±1
+Q
+java:S1128"4Remove this unused import 'java.util.stream.Stream'.(ó÷”8ãÍ¥½±1

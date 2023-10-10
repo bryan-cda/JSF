@@ -2,11 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+  <title>bookstore::index</title>
 </head>
 <body>
 <h1><%= "Welcome to Zephyr Bookstore!" %></h1>
 <br/>
-<a href="/bookstore/list">Books</a>
+<a href="/bookstore/store">Books</a>
+<a href="/bookstore/add.jsp">Add</a>
+<a href="/bookstore/find_by_title.jsp">Find</a>
 </body>
 </html>
