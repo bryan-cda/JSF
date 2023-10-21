@@ -1,6 +1,5 @@
 package br.com.servlet.java.javaservelet;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -13,27 +12,43 @@ import static java.lang.String.format;
 
 @WebServlet(urlPatterns = "/login")
 public class BookStoreLoginController extends HttpServlet {
+    private static final String INDEX_URI = "'/bookstore'";
+    private static final int MAX_AGE = 10 * 60;
+    private static final String WELCOME_MESSAGE = "<h3>Welcome, %s!";
+    private static final String HTML_H3_CLOSE_TAG = "</h3>";
+    private static final String LOGGED_USER = "logged.user";
+    private static final String USERNAME_PARAM = "username";
+    private static final String PASSWORD_PARAM = "password";
+    private static final String HTML_BODY_H_1_BOOKSTORE_LOGIN_TAG = "<html><body><h1>Bookstore::Login";
+    private static final String CLOSE_BODY_AND_HTML_TAG = "</body></html>";
+    private static final String HREF_TAG = "<a href=";
+    private static final String CLOSE_HREF_TAG = "> back </a>";
+    public static final String USERNAME_NOT_FOUND_MESSAGE = "<h3>Username %s not found!";
     private final UserService userService = new UserService();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
+        String username = req.getParameter(USERNAME_PARAM);
+        String password = req.getParameter(PASSWORD_PARAM);
 
         PrintWriter writer = resp.getWriter();
-        writer.println("<html><body><h1>Bookstore::Login");
+
+        writer.println(HTML_BODY_H_1_BOOKSTORE_LOGIN_TAG);
+
         try {
             if(userService.authenticateUserByUsernameAndPassword(username, password)){
-               writer.println(format("<h3>Welcome, %s!", username).concat("</h3>"));
-                Cookie cookie = new Cookie("logged.user", username);
+               writer.println(format(WELCOME_MESSAGE, username).concat(HTML_H3_CLOSE_TAG));
+                Cookie cookie = new Cookie(LOGGED_USER, username);
+                cookie.setMaxAge(MAX_AGE);
                 resp.addCookie(cookie);
 
             } else{
-                writer.println(format("<h3>Username %s not found!", username).concat("</h3>"));
+                writer.println(format(USERNAME_NOT_FOUND_MESSAGE, username).concat(HTML_H3_CLOSE_TAG));
             }
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } finally {
-            writer.println("</body></html>");
+            writer.println(CLOSE_BODY_AND_HTML_TAG);
         }
+        writer.println(HREF_TAG.concat(INDEX_URI).concat(CLOSE_HREF_TAG));
     }
 }

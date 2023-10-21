@@ -1,10 +1,8 @@
 
-g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8‡’»¥±1
+g	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Âë»˜µ1
 E
-java:S5411"(Use a primitive boolean expression here.(·Ä€Ñ8ˆ’»¥±1
+java:S5411&"(Use a primitive boolean expression here.(·Ä€Ñ8Äë»˜µ1
 m
-java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(¼½Ù†8æã®½±1
+java:S1989!"PHandle the following exception that could be thrown by "getWriter": IOException.(¼½Ù†8Óë»˜µ1
 c
-java:S1989"AHandle the "RuntimeException" thrown here in a "try/catch" block.(Ò‚Òéüÿÿÿÿ8éã®½±1
-Y
-java:S1128"<Remove this unused import 'javax.servlet.RequestDispatcher'.(Ëöò¼8ìã®½±1
+java:S19890"AHandle the "RuntimeException" thrown here in a "try/catch" block.(Ò‚Òéüÿÿÿÿ8Õë»˜µ1

@@ -29,3 +29,9 @@ Q
 !src/main/webapp/find_by_title.jsp,0\6\06018039b2fc6078779bb042c7c5bfa2c7a56f52
 |
 Lsrc/main/java/br/com/servlet/java/javaservelet/BookStoreLoginController.java,a\a\aa667dbc06c194b8adfec2a2fb278d282b237619
+}
+Msrc/main/java/br/com/servlet/java/javaservelet/BookStoreLogoutController.java,4\b\4b0c18725dce9e7802f8384b7e18ffef05f0161f
+J
+src/main/webapp/logout.jsp,e\7\e7a26d636a815ab45217ad388a04d73824e80eff
+y
+Isrc/main/java/br/com/servlet/java/javaservelet/BookStoreLoginService.java,f\f\ff04ff8256bc5ea4f845d4f06f8fdadc4375e187

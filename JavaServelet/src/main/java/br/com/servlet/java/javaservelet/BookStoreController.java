@@ -26,6 +26,8 @@ public class BookStoreController extends HttpServlet {
     private static final String HTML_LI = "<li>";
     private static final String HTML_END_LI = "</li>";
     private static final String HTML_BREAK_LINE = "<br>";
+
+    private BookStoreLoginService bookStoreLoginService = new BookStoreLoginService();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();

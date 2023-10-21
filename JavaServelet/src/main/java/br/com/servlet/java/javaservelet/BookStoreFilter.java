@@ -5,6 +5,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
@@ -24,18 +25,6 @@ public class BookStoreFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws ServletException, IOException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
-
-        Cookie[] cookies = request.getCookies();
-
-        if(nonNull(request) && nonNull(cookies)){
-            String URI = request.getRequestURI();
-            for (Cookie cookie : cookies){
-                String loggedUser = cookie.getValue();
-                if(cookie.getName().equals(LOGGED_USER_COOKIE)){
-                    System.out.println(format("URI ::: [%s] ::: LOGGED USER [%s]",URI, loggedUser));
-                }
-            }
-        }
 
         System.out.println(format("URI ::: [%s]",request.getRequestURI()));
 

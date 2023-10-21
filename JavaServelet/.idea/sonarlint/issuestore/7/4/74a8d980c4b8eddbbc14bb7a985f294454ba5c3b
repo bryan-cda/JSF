@@ -1,2 +1,12 @@
 
-L	java:S106"+Replace this use of System.out by a logger.(ŸØÁÓøÿÿÿÿ8ê§”½±1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ü›ºÆýÿÿÿÿ8®œéÍ±1
+ž
+java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8®œéÍ±1
+F	java:S106"+Replace this use of System.out by a logger.(¤£¼B8ÆÝ…Å³1
+S
+java:S1128"6Remove this unused import 'javax.servlet.http.Cookie'.(«Þªü8™¶†Å³1
+`
+java:S1128"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë8âÖ†Å³1
+S
+java:S1128"6Remove this unused import 'java.util.Objects.nonNull'.(ûÅê’8™¶†Å³1
