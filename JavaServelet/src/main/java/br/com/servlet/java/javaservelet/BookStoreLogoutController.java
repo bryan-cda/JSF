@@ -12,8 +12,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static java.util.Objects.nonNull;
-
 @WebServlet(urlPatterns = "/logout")
 public class BookStoreLogoutController extends HttpServlet {
     public static final String INDEX_URI = "'/bookstore'";
@@ -33,19 +31,9 @@ public class BookStoreLogoutController extends HttpServlet {
 
         writer.println("<html><body>");
 
-        Cookie userLoggedCookie = null;
+        req.getSession().removeAttribute("logged.user");
 
-        for(Cookie cookie : cokkieList){
-            if(cookie.getName().equalsIgnoreCase(LOGGED_USER)){
-                userLoggedCookie = cookie;
-            }
-        }
-
-        if (nonNull(userLoggedCookie)){
-            userLoggedCookie.setMaxAge(EXPIRY);
-            writer.println(HTML_LOGOUT_MESSAGE);
-            resp.addCookie(userLoggedCookie);
-        }
+        writer.println(HTML_LOGOUT_MESSAGE);
 
         writer.println("<a href=".concat(INDEX_URI).concat("> back </a>"));
         writer.println("</body></html>");

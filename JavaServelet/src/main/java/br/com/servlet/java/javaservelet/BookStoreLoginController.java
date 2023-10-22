@@ -1,10 +1,7 @@
 package br.com.servlet.java.javaservelet;
 
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -36,11 +33,11 @@ public class BookStoreLoginController extends HttpServlet {
 
         try {
             if(userService.authenticateUserByUsernameAndPassword(username, password)){
-               writer.println(format(WELCOME_MESSAGE, username).concat(HTML_H3_CLOSE_TAG));
-                Cookie cookie = new Cookie(LOGGED_USER, username);
-                cookie.setMaxAge(MAX_AGE);
-                resp.addCookie(cookie);
-
+                User user = userService.findByUsername(username);
+                HttpSession session = req.getSession();
+                session.setMaxInactiveInterval(MAX_AGE);
+                session.setAttribute(LOGGED_USER, user.toString());
+                writer.println(format(WELCOME_MESSAGE, username).concat(HTML_H3_CLOSE_TAG));
             } else{
                 writer.println(format(USERNAME_NOT_FOUND_MESSAGE, username).concat(HTML_H3_CLOSE_TAG));
             }

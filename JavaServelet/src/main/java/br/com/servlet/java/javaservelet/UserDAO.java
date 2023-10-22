@@ -1,2 +1,4 @@
-package br.com.servlet.java.javaservelet;public class UserDAO {
+package br.com.servlet.java.javaservelet;
+
+public class UserDAO {
 }

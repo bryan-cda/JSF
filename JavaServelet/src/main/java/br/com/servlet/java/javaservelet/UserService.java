@@ -2,17 +2,19 @@ package br.com.servlet.java.javaservelet;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
 public class UserService {
-    public static final String mockUsername = "foo";
-    public static final String mockPassword = "bar";
+    private static final String mockUsername = "foo";
+    private static final String mockPassword = "bar";
+    private static final String mockUser = "Bryan";
     List<User> mockDataBase = new ArrayList<>();
 
     public Boolean authenticateUserByUsernameAndPassword(String username, String password) throws ClassNotFoundException {
-        mockDataBase.add(new User(mockUsername, mockPassword));
+        mockDataBase.add(new User(mockUser,mockUsername, mockPassword));
 
         long count = mockDataBase.stream()
                 .filter(u -> normalizeCredentialsToCompare(u.getUsername())
@@ -30,5 +32,9 @@ public class UserService {
 
     public static Boolean compareCountMajorThanZero(Long credential){
         return credential > 0;
+    }
+
+    public User findByUsername(String username) {
+        return mockDataBase.stream().filter(u -> u.getUsername().equalsIgnoreCase(username)).collect(Collectors.toList()).get(0);
     }
 }

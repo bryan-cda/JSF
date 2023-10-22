@@ -1,9 +1,11 @@
 package br.com.servlet.java.javaservelet;
 public class User {
+    private String user;
     private String username;
     private String password;
 
-    public User(String username, String password) {
+    public User(String user, String username, String password) {
+        this.user = user;
         this.username = username;
         this.password = password;
     }
@@ -24,5 +26,22 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "user='" + user + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

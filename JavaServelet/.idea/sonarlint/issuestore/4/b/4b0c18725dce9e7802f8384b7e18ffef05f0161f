@@ -1,3 +1,9 @@
 
+n
+java:S1192""QUse already-defined constant 'LOGGED_USER' instead of duplicating its value here.(¨¤ý¨8çðÅ¬µ1
+[
+java:S1854">Remove this useless assignment to local variable "cokkieList".(Ó…Îó8é¬Ä¬µ1
+L
+java:S1481"/Remove this unused "cokkieList" local variable.(Ó…Îó8ì¬Ä¬µ1
 m
-java:S1989 "PHandle the following exception that could be thrown by "getWriter": IOException.(¼½Ù†8¸úž˜µ1
+java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(¼½Ù†8ì¬Ä¬µ1

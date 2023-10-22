@@ -10,8 +10,6 @@
 <a href="/bookstore/store">Books</a>
 <a href="/bookstore/add.jsp">Add</a>
 <a href="/bookstore/find_by_title.jsp">Find</a>
-<br>
-<br>
 <form action="/bookstore/login.jsp" method="POST">
   <button type="submit" value="logout">login</button>
 </form>

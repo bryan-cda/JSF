@@ -1,12 +1,9 @@
 
+u
+java:S1192"XUse already-defined constant 'LOGGED_USER_COOKIE' instead of duplicating its value here.(Ş£áà8‚Õº¬µ1
 £
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ü›ºÆıÿÿÿÿ8®œéÍ±1
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ü›ºÆıÿÿÿÿ8‰Õº¬µ1
 
-java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8®œéÍ±1
-F	java:S106"+Replace this use of System.out by a logger.(¤£¼B8Æİ…Å³1
-S
-java:S1128"6Remove this unused import 'javax.servlet.http.Cookie'.(«Şªü8™¶†Å³1
-`
-java:S1128"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë8âÖ†Å³1
-S
-java:S1128"6Remove this unused import 'java.util.Objects.nonNull'.(ûÅê’8™¶†Å³1
+java:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8‰Õº¬µ1
+F	java:S106"+Replace this use of System.out by a logger.(¤£¼B8Õº¬µ1
+G	java:S106"+Replace this use of System.out by a logger.(ÍÄÎ«8Õº¬µ1
