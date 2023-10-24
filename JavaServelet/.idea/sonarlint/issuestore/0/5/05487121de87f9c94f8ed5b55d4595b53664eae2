@@ -1,6 +1,0 @@
-
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(­‡¶á8ÎÇ§«µ1
-{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¸€»¾ùÿÿÿÿ8ÏÇ§«µ1
-{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ë•Ô®ýÿÿÿÿ8ÏÇ§«µ1
-–
-java:S1130"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(ÕÚÞŽ8Ê¦Ò¬µ1
